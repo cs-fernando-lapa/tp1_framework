@@ -14,18 +14,19 @@
         <li><a href="index1.html">Exibição de categorias</a></li>
         <li><a href="index2.html">Criacão de tarefas</a></li>
         <li><a href="index3.html">Criacão de categorias</a></li>
+        <li><a href="respostasEmail.html">Resposta e-mail</a></li>
       </nav>
     </header>
     <div ng-controller="myController as $ctrl">
       <div class="principal">
         <h3>Selecione a categoria que queira adicionar a tarefa tarefa</h3>
-        <select ng-model="this.seleciona" name="Seleciona categoria">
+        <select ng-model="$ctrl.seleciona" name="Seleciona categoria">
           <option value="" ng-repeat="categori in $ctrl.categorias">{{categori}}</option>
         </select>
         <hr>
         <h3>Adicione uma tarefa</h3>
         <form ng-submit="$ctrl.plusTarefa()">
-          <input type="text" name="Inserir tarefa" placeholder="Insira uma tarefa" ng-model="$ctrl.nome" required="required">
+          <input type="text" ng-required="$ctrl.seleciona" name="Inserir tarefa" placeholder="Insira uma tarefa" ng-model="$ctrl.nome" required="required">
           <input type="submit" name="Enviar">
         </form>
         <hr>

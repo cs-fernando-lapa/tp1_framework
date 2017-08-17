@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tp1 Framework</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <body ng-app="myApp">
+    <header>
+      <nav>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index1.html">Exibição de categorias</a></li>
+        <li><a href="index2.html">Criacão de tarefas</a></li>
+        <li><a href="index3.html">Criacão de categorias</a></li>
+      </nav>
+    </header>
+    <div ng-controller="myController as $ctrl">
+      <div class="principal">
+        <h3>Frameworks são coleções que facilitam o processo de desenvolvimento.</h3>
+
+          <p>
+          Ele funciona como um conjunto de funções, que englobam funções maiores e complexas.
+
+          <p>
+          Podemos utilizar a seguinte analogia, você tem uma chave de fenda e quer parafusar o seu parafuso em algum lugar.
+          O framework seria utilizar uma parafusadora elétrica, sendo assim, ainda iríamos parafusar o parafuso, porém com menos complexidade, tempo e mais agilidade para dedicarmos tempo em outro processo.
+          </p>
+          <p>
+          Utilizaremos ele no projeto pra deixar o mesmo mais ágil e melhor e padronizado.
+          </p>
+          O framework é pra deixar o projeto mais barato, desde que seja mapeado todo o projeto e qual o melhor framework a ser utilizado no mesmo.
+          </p>
+
+          <hr>
+          <p><h3>Email</h3></p>
+
+          <p>Caro cliente, ficamos contente com seu interesse em frameworks e no processo de DEV.
+
+          <p>
+            A estrutura da aplicação é padronizada no MVC(Model, View, Controller).
+
+          Basicamente, essa estrutura divide sua aplicação pra facilitar em modificação paralelas.
+          </p>
+          <p>
+          O Model é basicamente a representação dos dados.
+
+          Ex.: Cadastrar usuário -> nome : Cliente
+
+          Nesse caso o model é o dado “Cliente”.
+          </p>
+          <p>
+          O View é literalmente a sua página. Onde os Model serão apresentados.
+
+          O Controller(á respondendo a segunda pergunta), é o controle dos Model’s, e onde eles serão apresentados nas View’s.
+
+          <p>Basicamente, podemos citar o seguinte exemplo no controller:
+
+          Ex.: Na View temos a tela de Editar o cadastro do usuário
+
+          Nela tem o campo nome, onde o Controller disponibiliza o “nome” ao campo na View, pegando a informação no Model.
+          </p>
+          </p>
+          As diretivas basicamente são implementações de funções, porém de forma declarativa.
+
+          Filtro serve para a view limitar o que será exibido do controller.
+
+          O serviço faz o pré processamento dos dados, e os prepara para serem consumidos pelo controller.
+          </p>
+      </div>
+    </div>
+  </body>
+</html>
