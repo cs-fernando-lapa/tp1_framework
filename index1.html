@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tp1 Framework</title>
+    <title>Tp1 Framework - Categoria</title>
   </head>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
@@ -11,14 +11,50 @@
     <header>
       <nav>
         <li><a href="index.html">Home</a></li>
-        <li><a href="index1.html">Criacão de categorias</a></li>
-        <li><a href="index2.html">Criacão de taregas</a></li>
+        <li><a href="index1.html">Exibição de categorias</a></li>
+        <li><a href="index2.html">Criacão de tarefas</a></li>
+        <li><a href="index3.html">Criacão de categorias</a></li>
       </nav>
     </header>
-teste1
-    <div ng-controller="myController">
-      {{tarefa.details.nome}}
+    <div ng-controller="myController as $ctrl">
+      <div class="principal">
+        <table>
+          <caption>Categoria "Casa"</caption>
+          <th>Tarefa Realizada</th>
+          <th>Tarefa</th>
+          <th>Categoria</th>
+            <tr ng-repeat="tarefa in $ctrl.tarefas | filter:{categoria: 'Casa'}">
+              <td><input type="checkbox" ng-model="tarefa.feito"></td>
+              <td>{{tarefa.nome}}</td>
+              <td>{{tarefa.categoria}}</td>
+            </tr>
+            <hr>
+        </table>
+        <table>
+          <caption>Categoria "Casa"</caption>
+          <th>Tarefa Realizada</th>
+          <th>Tarefa</th>
+          <th>Categoria</th>
+            <tr ng-repeat="tarefa in $ctrl.tarefas | filter:{categoria: 'Faculdade'}">
+              <td><input type="checkbox" ng-model="tarefa.feito"></td>
+              <td>{{tarefa.nome}}</td>
+              <td>{{tarefa.categoria}}</td>
+            </tr>
+            <hr>
+        </table>
+        <table>
+          <caption>Categoria "Casa"</caption>
+          <th>Tarefa Realizada</th>
+          <th>Tarefa</th>
+          <th>Categoria</th>
+            <tr ng-repeat="tarefa in $ctrl.tarefas | filter:{categoria: 'Trabalho'}">
+              <td><input type="checkbox" ng-model="tarefa.feito"></td>
+              <td>{{tarefa.nome}}</td>
+              <td>{{tarefa.categoria}}</td>
+            </tr>
+            <hr>
+        </table>
+      </div>
     </div>
-
   </body>
 </html>

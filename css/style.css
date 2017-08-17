@@ -1,3 +1,15 @@
+header{
+  background: green;
+}
 nav li {
   display: inline-block;
+}
+a{
+  color: white;
+}
+table, th, td {
+   border: 1px solid black;
+}
+.principal{
+  overflow-x:auto;
 }

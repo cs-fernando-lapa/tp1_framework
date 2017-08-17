@@ -16,5 +16,18 @@
         { nome: 'Estudar Etapa 3', categoria: 'Faculdade', feito: false },
         { nome: 'Fazer TP1', categoria: 'Faculdade', feito: false }
       ]
+      this.categorias = ['Casa', 'Trabalho', 'Faculdade'];
+
+      this.plusCategoria = function(){
+        this.categorias.push(this.categoria)
+      }
+
+      this.plusTarefa = function(){
+        this.tarefas.push({
+          nome:this.nome,
+          categoria:this.seleciona,
+          feito:false
+        })
+      }
     }]);
   })();
